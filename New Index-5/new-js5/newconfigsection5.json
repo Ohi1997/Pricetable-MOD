@@ -1,0 +1,115 @@
+{
+    "settings": [
+      {
+        "showperiodheader": true,
+        "ColorComment": "Theme color can be: red, green, blue, black, orange, teal, pink, cyan, brown, purple",
+        "themecolor": "red",
+        "FontComment": "Font name can be: opensans, nunito, poppins, raleway, alexandria, commissioner, farro, geologica, dmsans, quicksand ",
+        "themefont": "opensans"
+      }
+    ],
+    "periodheaders": [
+      {
+        "name": "periodheader1",
+        "value": "Monthly",
+        "visible": true 
+      },
+      {
+        "name": "periodheader2",
+        "value": "Quarterly (10% off)",
+        "visible": true 
+      },
+      {
+        "name": "periodheader3",
+        "value": "Halfyearly (15% off)",
+        "visible": true 
+      },
+      {
+        "name": "periodheader4",
+        "value": "Yearly (20% off)",
+        "visible": true 
+      }
+    ],
+    "headers": [
+      {
+        "name": "monthly",
+        "plans": [
+          {
+            "name": "SINGLE",
+            "monthlyprice": 20.99,
+            "monthlylink": ""
+          },
+          {
+            "name": "FAMILY",
+            "monthlyprice": 32.55,
+            "monthlylink": ""
+          },
+          {
+            "name": "ONE FOR ALL",
+            "monthlyprice": 55.99,
+            "monthlylink": ""
+          }
+        ]
+      },
+      {
+        "name": "quarterly",
+        "plans": [
+          {
+            "name": "SINGLE",
+            "quarterlyprice": 30.99,
+            "quarterlylink": ""
+          },
+          {
+            "name": "FAMILY",
+            "quarterlyprice": 48.99,
+            "quarterlylink": ""
+          },
+          {
+            "name": "ONE FOR ALL",
+            "quarterlyprice": 80.99,
+            "quarterlylink": ""
+          }
+        ]
+      },
+      {
+        "name": "halfyearly",
+        "plans": [
+          {
+            "name": "SINGLE",
+            "halfyearlyprice": 40.99,
+            "halfyearlylink": ""
+          },
+          {
+            "name": "FAMILY",
+            "halfyearlyprice": 62.99,
+            "halfyearlylink": ""
+          },
+          {
+            "name": "ONE FOR ALL",
+            "halfyearlyprice": 119.99,
+            "halfyearlylink": ""
+          }
+        ]
+      },
+      {
+        "name": "yearly",
+        "plans": [
+          {
+            "name": "SINGLE",
+            "yearlyprice": 60.99,
+            "yearlylink": ""
+          },
+          {
+            "name": "FAMILY",
+            "yearlyprice": 85.99,
+            "yearlylink": ""
+          },
+          {
+            "name": "ONE FOR ALL",
+            "yearlyprice": 156.99,
+            "yearlylink": ""
+          }
+        ]
+      }
+    ]
+  }

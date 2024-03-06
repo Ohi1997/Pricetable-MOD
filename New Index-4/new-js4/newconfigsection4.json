@@ -1,0 +1,115 @@
+{
+    "settings": [
+      {
+        "showperiodheader": false,
+        "ColorComment": "Theme color can be: red, green, blue, black, orange, teal, pink, cyan, brown, purple",
+        "themecolor": "black",
+        "FontComment": "Font name can be: opensans, nunito, poppins, raleway, alexandria, commissioner, farro, geologica, dmsans, quicksand ",
+        "themefont": "opensans"
+      }
+    ],
+    "periodheaders": [
+      {
+        "name": "periodheader1",
+        "value": "Monthly",
+        "visible": true 
+      },
+      {
+        "name": "periodheader2",
+        "value": "Quarterly (10% off)",
+        "visible": true 
+      },
+      {
+        "name": "periodheader3",
+        "value": "Halfyearly (15% off)",
+        "visible": true 
+      },
+      {
+        "name": "periodheader4",
+        "value": "Yearly (20% off)",
+        "visible": true 
+      }
+    ],
+    "headers": [
+      {
+        "name": "monthly",
+        "plans": [
+          {
+            "name": "BASIC",
+            "monthlyprice": 20.99,
+            "monthlylink": ""
+          },
+          {
+            "name": "PREMIUM",
+            "monthlyprice": 32.55,
+            "monthlylink": ""
+          },
+          {
+            "name": "SUPREME",
+            "monthlyprice": 55.99,
+            "monthlylink": ""
+          }
+        ]
+      },
+      {
+        "name": "quarterly",
+        "plans": [
+          {
+            "name": "BASIC",
+            "quarterlyprice": 30.99,
+            "quarterlylink": ""
+          },
+          {
+            "name": "PREMIUM",
+            "quarterlyprice": 48.99,
+            "quarterlylink": ""
+          },
+          {
+            "name": "SUPREME",
+            "quarterlyprice": 80.99,
+            "quarterlylink": ""
+          }
+        ]
+      },
+      {
+        "name": "halfyearly",
+        "plans": [
+          {
+            "name": "BASIC",
+            "halfyearlyprice": 40.99,
+            "halfyearlylink": ""
+          },
+          {
+            "name": "PREMIUM",
+            "halfyearlyprice": 62.99,
+            "halfyearlylink": ""
+          },
+          {
+            "name": "SUPREME",
+            "halfyearlyprice": 119.99,
+            "halfyearlylink": ""
+          }
+        ]
+      },
+      {
+        "name": "yearly",
+        "plans": [
+          {
+            "name": "BASIC",
+            "yearlyprice": 60.99,
+            "yearlylink": ""
+          },
+          {
+            "name": "PREMIUM",
+            "yearlyprice": 85.99,
+            "yearlylink": ""
+          },
+          {
+            "name": "SUPREME",
+            "yearlyprice": 156.99,
+            "yearlylink": ""
+          }
+        ]
+      }
+    ]
+  }

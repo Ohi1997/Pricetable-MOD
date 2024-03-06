@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+	<title>Flag_of_Poland</title>
+	<defs>
+		<image  width="800" height="500" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAH0AQMAAAD/jts7AAAAAXNSR0IB2cksfwAAAAZQTFRF////3BQ80JC0+AAAAIpJREFUeJztzQENAAAIA6D3L60t7uagAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADPTYFEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEonkMFkGREwIZUg1ugAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>
