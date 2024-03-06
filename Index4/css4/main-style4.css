@@ -411,7 +411,7 @@ a.plans.badge.feat:hover {
   right: 50px;
 }
 .slick-prev {
-  left: 40px;
+  left: 30px;
 }
 .slick-prev::before {
   content: "\f053";
@@ -2085,7 +2085,6 @@ section[data-font="raleway"] textarea {
   }
   .slick-prev {
     align-items: center;
-    left: 10px;
     padding: 0px;
   }
   .slick-next {

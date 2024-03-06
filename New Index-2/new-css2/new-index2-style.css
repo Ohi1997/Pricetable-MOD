@@ -468,7 +468,7 @@ a.plans.badge.feat:hover {
   right: 38px;
 }
 .slick-prev {
-  left: 40px;
+  left: 30px;
 }
 .slick-prev::before {
   content: "\f053";
@@ -1433,7 +1433,7 @@ section[data-font="raleway"] textarea {
   .slick-next {
     align-items: center;
     padding: 0px;
-    right: 6px;
+    right: 30px;
   }
   .slick-next::before {
     margin-left: 14px;
@@ -1567,13 +1567,13 @@ section[data-font="raleway"] textarea {
   }
   .slick-prev {
     align-items: center;
-    left: 10px;
+    left: 20px;
     padding: 0px;
   }
   .slick-next {
     align-items: center;
     padding: 0px;
-    right: 6px;
+    right: 20px;
   }
   .slick-next::before {
     margin-left: 14px;
@@ -1638,7 +1638,7 @@ section[data-font="raleway"] textarea {
   }
   .tabs-header {
     overflow-x: visible;
-    margin-left: 20px;
+    margin-left: 0px;
     position: relative;
     display: inline-block;
     vertical-align: middle;

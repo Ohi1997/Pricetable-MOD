@@ -369,10 +369,10 @@ a.plans.badge.feat {
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .slick-next {
-  right: 50px;
+  right: 25px;
 }
 .slick-prev {
-  left: 40px;
+  left: 20px;
 }
 .slick-prev::before {
   content: "\f053";
@@ -1330,7 +1330,7 @@ section[data-font="raleway"] textarea {
   }
   .slick-prev {
     align-items: center;
-    left: 15 px;
+    left: 20px;
     padding: 0px;
   }
   .slick-next {
@@ -1469,7 +1469,10 @@ section[data-font="raleway"] textarea {
   }
   .slick #slider .plan-container .wrapper .list-info {
     margin: -0.5px;
-    padding: 20px 30px 20px 30px;
+    padding: 20px 40px 30px;
+  }
+  .slick #slider .plan-container .list-info li {
+    padding: 5px 0px; 
   }
   .slick-prev {
     align-items: center;
@@ -1579,8 +1582,11 @@ section[data-font="raleway"] textarea {
   }
   .slick #slider .plan-container .wrapper .list-info {
     margin: 0px;
-    padding: 10px 15px 20px;
+    padding: 20px 30px;
   }
+  .slick #slider .plan-container .list-info li {
+    padding: 10px 0px;
+}
   .slick-prev {
     align-items: center;
     left: 10px;
@@ -1597,11 +1603,14 @@ section[data-font="raleway"] textarea {
     font-size: 16px;
     padding: 0;
   }
+  .plan-container .list-info li {
+    padding: 10px 0;
+  }
 }
 @media screen and (max-width: 320px) {
   .slick #slider .plan-container .wrapper .list-info {
     margin: 0px;
-    padding: 10px 25px 10px;
+    padding: 10px 20px 15px;
   }
   .slick #slider .plan-container .wrapper .top-content {
     padding: 30px 35px 15px;

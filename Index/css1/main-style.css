@@ -1482,7 +1482,7 @@ section[data-font="raleway"] textarea {
   }
   .tabs-header {
     overflow-x: visible;
-    margin-left: 20px;
+    margin-left: 0;
     position: relative;
     display: inline-block;
     vertical-align: middle;

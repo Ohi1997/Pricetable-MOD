@@ -1314,7 +1314,6 @@ section[data-font="raleway"] textarea {
   }
   .slick-prev {
     align-items: center;
-    left: 10px;
     padding: 0px;
   }
   .slick-next {
@@ -1453,13 +1452,12 @@ section[data-font="raleway"] textarea {
   }
   .slick-prev {
     align-items: center;
-    left: 10px;
     padding: 0px;
   }
   .slick-next {
     align-items: center;
     padding: 0px;
-    right: 6px;
+    right: 15px;
   }
   .slick-next::before {
     margin-left: 14px;

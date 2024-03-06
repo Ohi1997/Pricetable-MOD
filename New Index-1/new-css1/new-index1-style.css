@@ -457,11 +457,11 @@ a.plans.badge.feat:hover {
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .slick-next {
-  right: 38px;
+  right: 30px;
   top: 54%;
 }
 .slick-prev {
-  left: 40px;
+  left: 30px;
   top: 54%;
 }
 .slick-prev::before {
