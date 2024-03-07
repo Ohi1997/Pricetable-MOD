@@ -508,7 +508,7 @@ svg {
 }
 [data-color="black"] .c-pink,
 [data-color="black"] .c-purple {
-  color: #dfdddb !important;
+  color: #f3f3f3 !important;
 }
 [data-color="black"] .btn-default-purple {
   color: #1b1b1a;
@@ -572,7 +572,7 @@ svg {
 }
 [data-color="blue"] .c-pink,
 [data-color="blue"] .c-purple {
-  color: #dfdddb !important;
+  color: #f3f3f3 !important;
 }
 [data-color="blue"] .btn-default-purple {
   color: #1f2ac2;
@@ -636,7 +636,7 @@ svg {
 }
 [data-color="green"] .c-pink,
 [data-color="green"] .c-purple {
-  color: #dfdddb !important;
+  color: #f3f3f3 !important;
 }
 [data-color="green"] .btn-default-purple {
   color: #008000;
@@ -700,7 +700,7 @@ svg {
 }
 [data-color="pink"] .c-pink,
 [data-color="pink"] .c-purple {
-  color: #dfdddb !important;
+  color: #f3f3f3 !important;
 }
 [data-color="pink"] .btn-default-purple {
   color: #ee5586;
@@ -764,7 +764,7 @@ svg {
 }
 [data-color="red"] .c-pink,
 [data-color="red"] .c-purple {
-  color: #dfdddb !important;
+  color: #f3f3f3 !important;
 }
 [data-color="red"] .btn-default-purple {
   color: #d3443a;
@@ -828,7 +828,7 @@ svg {
 }
 [data-color="orange"] .c-pink,
 [data-color="orange"] .c-purple {
-  color: #dfdddb !important;
+  color: #f3f3f3 !important;
 }
 [data-color="orange"] .btn-default-purple {
   color: #d86c00;
@@ -892,7 +892,7 @@ svg {
 }
 [data-color="purple"] .c-pink,
 [data-color="purple"] .c-purple {
-  color: #dfdddb !important;
+  color: #f3f3f3 !important;
 }
 [data-color="purple"] .btn-default-purple {
   color: #9b1aac;
@@ -956,7 +956,7 @@ svg {
 }
 [data-color="teal"] .c-pink,
 [data-color="teal"] .c-purple {
-  color: #dfdddb !important;
+  color: #f3f3f3 !important;
 }
 [data-color="teal"] .btn-default-purple {
   color: #036969;
@@ -1020,7 +1020,7 @@ svg {
 }
 [data-color="cyan"] .c-pink,
 [data-color="cyan"] .c-purple {
-  color: #dfdddb !important;
+  color: #f3f3f3 !important;
 }
 [data-color="cyan"] .btn-default-purple {
   color: #40a8a8;
@@ -1084,7 +1084,7 @@ svg {
 }
 [data-color="brown"] .c-pink,
 [data-color="brown"] .c-purple {
-  color: #dfdddb !important;
+  color: #f3f3f3 !important;
 }
 [data-color="brown"] .btn-default-purple {
   color: #69320a;
@@ -1129,7 +1129,7 @@ svg {
 #radioplans[data-backgroundcolor="orange-bg"],
 [data-backgroundcolor="orange-bg"] .slick-list .draggable,
 [data-backgroundcolor="orange-bg"] .slick-list .slick-track {
-  background-color: #fceee4 !important;
+  background-color: #fff4ece0 !important;
 }
 #radioplans[data-backgroundcolor="teal-bg"],
 [data-backgroundcolor="teal-bg"] .slick-list .draggable,
@@ -1139,7 +1139,7 @@ svg {
 #radioplans[data-backgroundcolor="cyan-bg"],
 [data-backgroundcolor="cyan-bg"] .slick-list .draggable,
 [data-backgroundcolor="cyan-bg"] .slick-list .slick-track {
-  background-color: #ebebeb !important;
+  background-color: #e6ffff54 !important;
 }
 #radioplans[data-backgroundcolor="brown-bg"],
 [data-backgroundcolor="brown-bg"] .slick-list .draggable,
