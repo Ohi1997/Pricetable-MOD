@@ -224,6 +224,8 @@ a.plans.badge.feat:hover {
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
   font-size: 15px;
   color: #4c4a4a;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle).btn:hover {
   background-color: #fdd700;
@@ -235,14 +237,14 @@ a.plans.badge.feat:hover {
 .btn-secondary:not(:disabled):not(.disabled) {
   opacity: 0.8;
   border-radius: 13px;
-  background-color: #fffef5;
+  background-color: #ffffff;
   border: 1px solid #d6d6d6;
 }
 .btn-group > .btn:not(:first-child) {
   font-size: 15px;
   border-radius: 13px;
   opacity: 0.8;
-  background-color: #fffef5;
+  background-color: #ffffff;
   border: none !important;
   color: #4c4a4a;
   -ms-grid-row: 2;
@@ -952,7 +954,7 @@ section[data-font="raleway"] textarea {
   .slick #slider .plan-container .wrapper {
     width: 300px;
     margin-bottom: 20px;
-}
+  }
   .slick #slider .plan-container .wrapper .list-info {
     margin: 0px;
     padding: 10px;
