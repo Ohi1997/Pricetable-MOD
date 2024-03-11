@@ -37,17 +37,17 @@
           {
             "name": "BASIC",
             "monthlyprice": 20.99,
-            "monthlylink": ""
+            "monthlylink": "#"
           },
           {
             "name": "PREMIUM",
             "monthlyprice": 32.55,
-            "monthlylink": ""
+            "monthlylink": "#"
           },
           {
             "name": "SUPREME",
             "monthlyprice": 55.99,
-            "monthlylink": ""
+            "monthlylink": "#"
           }
         ]
       },
@@ -57,17 +57,17 @@
           {
             "name": "BASIC",
             "quarterlyprice": 30.99,
-            "quarterlylink": ""
+            "quarterlylink": "#"
           },
           {
             "name": "PREMIUM",
             "quarterlyprice": 48.99,
-            "quarterlylink": ""
+            "quarterlylink": "#"
           },
           {
             "name": "SUPREME",
             "quarterlyprice": 80.99,
-            "quarterlylink": ""
+            "quarterlylink": "#"
           }
         ]
       },
@@ -77,17 +77,17 @@
           {
             "name": "BASIC",
             "halfyearlyprice": 40.99,
-            "halfyearlylink": ""
+            "halfyearlylink": "#"
           },
           {
             "name": "PREMIUM",
             "halfyearlyprice": 62.99,
-            "halfyearlylink": ""
+            "halfyearlylink": "#"
           },
           {
             "name": "SUPREME",
             "halfyearlyprice": 119.99,
-            "halfyearlylink": ""
+            "halfyearlylink": "#"
           }
         ]
       },
@@ -97,17 +97,17 @@
           {
             "name": "BASIC",
             "yearlyprice": 60.99,
-            "yearlylink": ""
+            "yearlylink": "#"
           },
           {
             "name": "PREMIUM",
             "yearlyprice": 85.99,
-            "yearlylink": ""
+            "yearlylink": "#"
           },
           {
             "name": "SUPREME",
             "yearlyprice": 156.99,
-            "yearlylink": ""
+            "yearlylink": "#"
           }
         ]
       }

@@ -37,17 +37,17 @@
           {
             "name": "SINGLE",
             "monthlyprice": 20.99,
-            "monthlylink": "https://astgd.com"
+            "monthlylink": "#"
           },
           {
             "name": "FAMILY",
             "monthlyprice": 32.55,
-            "monthlylink": "https://firevps.net"
+            "monthlylink": "#"
           },
           {
             "name": "ONE FOR ALL",
             "monthlyprice": 55.99,
-            "monthlylink": "https://validemailcollector.com"
+            "monthlylink": "#"
           }
         ]
       },
@@ -57,17 +57,17 @@
           {
             "name": "SINGLE",
             "quarterlyprice": 30.99,
-            "quarterlylink": ""
+            "quarterlylink": "#"
           },
           {
             "name": "FAMILY",
             "quarterlyprice": 48.99,
-            "quarterlylink": ""
+            "quarterlylink": "#"
           },
           {
             "name": "ONE FOR ALL",
             "quarterlyprice": 80.99,
-            "quarterlylink": ""
+            "quarterlylink": "#"
           }
         ]
       },
@@ -77,17 +77,17 @@
           {
             "name": "SINGLE",
             "halfyearlyprice": 40.99,
-            "halfyearlylink": ""
+            "halfyearlylink": "#"
           },
           {
             "name": "FAMILY",
             "halfyearlyprice": 62.99,
-            "halfyearlylink": ""
+            "halfyearlylink": "#"
           },
           {
             "name": "ONE FOR ALL",
             "halfyearlyprice": 119.99,
-            "halfyearlylink": ""
+            "halfyearlylink": "#"
           }
         ]
       },
@@ -97,17 +97,17 @@
           {
             "name": "SINGLE",
             "yearlyprice": 60.99,
-            "yearlylink": ""
+            "yearlylink": "#"
           },
           {
             "name": "FAMILY",
             "yearlyprice": 85.99,
-            "yearlylink": ""
+            "yearlylink": "#"
           },
           {
             "name": "ONE FOR ALL",
             "yearlyprice": 156.99,
-            "yearlylink": ""
+            "yearlylink": "#"
           }
         ]
       }

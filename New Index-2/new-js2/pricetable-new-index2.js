@@ -300,13 +300,14 @@ jQuery(document).ready(function ($) {
       infinite: true,
       centerPadding: "200px",
       slidesToShow: 4,
-      slidesToScroll: 1,
+      slidesToScroll: 4,
       responsive: [
         {
           breakpoint: 1200,
           settings: {
             centerPadding: "100px",
             slidesToShow: 3,
+            slidesToScroll: 3
           },
         },
         {
@@ -315,6 +316,7 @@ jQuery(document).ready(function ($) {
             centerMode: true,
             centerPadding: "50px",
             slidesToShow: 2,
+            slidesToScroll: 2
           },
         },
         {
@@ -323,6 +325,7 @@ jQuery(document).ready(function ($) {
             centerMode: false,
             centerPadding: "50px",
             slidesToShow: 2,
+            slidesToScroll: 2
           },
         },
         {
