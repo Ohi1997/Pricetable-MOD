@@ -42,11 +42,12 @@ body {
 }
 
 .table-card p {
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 
 .table-card a {
+    font-size: 20px;
     display: block;
     background-color: #007bff;
     color: #fff;
