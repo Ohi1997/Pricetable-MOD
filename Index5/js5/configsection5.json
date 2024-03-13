@@ -1,7 +1,6 @@
 {
     "settings": [
       {
-        "hideheadergroup": true,
         "hideperiodheader": false,
         "ColorComment": "Theme color can be: red, green, blue, black, orange, teal, pink, cyan, brown, purple",
         "themecolor": "red",
