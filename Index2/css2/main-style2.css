@@ -1124,7 +1124,7 @@ svg {
 #radioplans[data-backgroundcolor="purple-bg"],
 [data-backgroundcolor="purple-bg"] .slick-list .draggable,
 [data-backgroundcolor="purple-bg"] .slick-list .slick-track {
-  background-color: #e6dcd5 !important;
+  background-color: #fef7ff !important;
 }
 #radioplans[data-backgroundcolor="orange-bg"],
 [data-backgroundcolor="orange-bg"] .slick-list .draggable,
@@ -1134,7 +1134,7 @@ svg {
 #radioplans[data-backgroundcolor="teal-bg"],
 [data-backgroundcolor="teal-bg"] .slick-list .draggable,
 [data-backgroundcolor="teal-bg"] .slick-list .slick-track {
-  background-color: #c1e4e4 !important;
+  background-color: #f0ffffd9 !important;
 }
 #radioplans[data-backgroundcolor="cyan-bg"],
 [data-backgroundcolor="cyan-bg"] .slick-list .draggable,
