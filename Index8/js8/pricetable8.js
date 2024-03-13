@@ -6,7 +6,7 @@ $(document).ready(function ($) {
     var link = period + "link";
 
     $.ajax({
-      url: "new-js4/newconfigsection4.json",
+      url: "js8/configsection8.json",
       dataType: "json",
       success: function (data) {
         var headerMatched = false;
@@ -58,7 +58,7 @@ $(document).ready(function ($) {
   // Initial setup
 
   $.ajax({
-    url: "new-js4/newconfigsection4.json",
+    url: "js8/configsection8.json",
     dataType: "json",
     success: function (data) {
       // To hide & show
