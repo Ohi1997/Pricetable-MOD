@@ -23,7 +23,7 @@ $(document).ready(function ($) {
     var link = period + "link";
 
     $.ajax({
-      url: "new-js5/newconfigsection5.json",
+      url: "js9/configsection9.json",
       dataType: "json",
       success: function (data) {
         var headerMatched = false;
@@ -60,7 +60,7 @@ $(document).ready(function ($) {
 
   // Initial setup
   $.ajax({
-    url: "new-js5/newconfigsection5.json",
+    url: "js9/configsection9.json",
     dataType: "json",
     success: function (data) {
       showperiodheader = data.settings[0].showperiodheader;
