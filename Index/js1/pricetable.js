@@ -1,4 +1,4 @@
-$(function () {
+jQuery(document).ready(function ($) {
   //declaring global variables
   var data;
   var currentPeriodHeader;
