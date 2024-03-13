@@ -280,7 +280,7 @@ section[data-font="raleway"] li {
 /* COLORS */
 [data-color="red"] .price-tab {
   background-color: #e6071d; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to bottom right, #e6071d, #8d0d22);
+  background-image: linear-gradient(to bottom right, #e6071d, #b31322);
 }
 [data-color="red"] .price-tab li {
   color: #fff;

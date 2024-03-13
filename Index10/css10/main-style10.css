@@ -551,14 +551,14 @@ svg {
 [data-color="cyan"]
   .tabs-header
   .btn-secondary:not(:disabled):not(.disabled).active {
-  background-color: #387979 !important;
+  background-color: #40a8a8 !important;
 }
 [data-color="cyan"] .btn-default-pink:hover,
 [data-color="cyan"] .pricing .list-info {
-  background-color: #387979;
+  background-color: #40a8a8;
 }
 [data-color="cyan"] ::selection {
-  background: #387979;
+  background: #40a8a8;
 }
 
 [data-color="cyan"] .c-pink-top,
@@ -567,33 +567,33 @@ svg {
 [data-color="cyan"] .slick #slider .plan-container .list-info li,
 [data-color="cyan"] .slick #slider .plan-container .wrapper .list-info i,
 [data-color="cyan"] .slick #slider .plan-container .title {
-  color: #387979 !important;
+  color: #40a8a8 !important;
 }
 
 [data-color="cyan"] .btn-default-pink {
-  color: #387979;
-  border: 1px solid #387979;
+  color: #40a8a8;
+  border: 1px solid #40a8a8;
 }
 [data-color="cyan"] .tabs.offers-tabs .tabs-header .active {
-  border-left: 3px solid #387979 !important;
-  color: #387979 !important;
+  border-left: 3px solid #40a8a8 !important;
+  color: #40a8a8 !important;
 }
 [data-color="cyan"] .pricing .wrapper .title {
-  color: #387979;
+  color: #40a8a8;
 }
 [data-color="cyan"] .bg-purple {
-  background-color: #387979 !important;
+  background-color: #40a8a8 !important;
 }
 [data-color="cyan"] .c-pink,
 [data-color="cyan"] .c-purple {
   color: #dfdddb !important;
 }
 [data-color="cyan"] .btn-default-purple {
-  color: #387979;
-  border: 1px solid #387979;
+  color: #40a8a8;
+  border: 1px solid #40a8a8;
 }
 [data-color="cyan"] .btn-default-purple:hover {
-  background-color: #387979;
+  background-color: #40a8a8;
 }
 
 /* @@ Style for themecolor : brown */
@@ -1023,34 +1023,34 @@ svg {
 /* @@ Style for All backgroundcolor */
 
 #radioplans[data-backgroundcolor="black-bg"] {
-  background-color: #484747 !important;
+  background-color: #282828 !important;
 }
 #radioplans[data-backgroundcolor="brown-bg"] {
   background-color: #913f04 !important;
 }
 #radioplans[data-backgroundcolor="cyan-bg"] {
-  background-color: #40a8a8 !important;
+  background-color: #2da7a1 !important;
 }
 #radioplans[data-backgroundcolor="teal-bg"] {
   background-color: #036969 !important;
 }
 #radioplans[data-backgroundcolor="pink-bg"] {
-  background-color: #d95c84 !important;
+  background-color: #ef6490 !important;
 }
 #radioplans[data-backgroundcolor="green-bg"] {
-  background-color: #065e06 !important;
+  background-color: #1a7e1a  !important;
 }
 #radioplans[data-backgroundcolor="blue-bg"] {
   background-color: #1d27b1 !important;
 }
 #radioplans[data-backgroundcolor="red-bg"] {
-  background-color: #a12820 !important;
+  background-color: #e5392c !important;
 }
 #radioplans[data-backgroundcolor="purple-bg"] {
   background-color: #6a1e74 !important;
 }
 #radioplans[data-backgroundcolor="orange-bg"] {
-  background-color: #d76d25 !important;
+  background-color: #e1641b !important;
 }
 /* @@ Style for All themefont */
 

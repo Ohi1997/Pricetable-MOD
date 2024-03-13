@@ -3,7 +3,7 @@
       {
         "showperiodheader": true,
         "ColorComment": "Theme color can be: red, green, blue, black, orange, teal, pink, cyan, brown, purple",
-        "themecolor": "red",
+        "themecolor": "blue",
         "FontComment": "Font name can be: opensans, nunito, poppins, raleway, alexandria, commissioner, farro, geologica, dmsans, quicksand ",
         "themefont": "opensans"
       }

@@ -27,7 +27,7 @@ body {
 .table-card {
     text-align: center;
     margin: 0 auto;
-    width: 500px;
+    /* width: 500px; */
     background-color: #fff;
     border: 1px solid #dee2e6;
     padding: 15px;
@@ -59,4 +59,11 @@ body {
 
 .table-card a:hover {
     background-color: #0056b3;
+}
+
+@media (min-width: 767px) and (max-width: 5000px) {
+    .table-card {
+        width: 500px;
+
+    }
 }
