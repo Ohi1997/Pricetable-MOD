@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+$(function () {
   //declaring global variables
   var data;
   var currentPeriodHeader;
@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
     var link = period + "link";
 
     $.ajax({
-      url: "new-js1/newconfigsection1.json",
+      url: "js5/configsection5.json",
       dataType: "json",
       success: function (jsonData) {
         data = jsonData;
@@ -50,7 +50,7 @@ jQuery(document).ready(function ($) {
 
   // Trigger updatePricing with default values when the DOM is ready
   $.ajax({
-    url: "new-js1/newconfigsection1.json",
+    url: "js5/configsection5.json",
     dataType: "json",
     success: function (jsonData) {
       data = jsonData;
@@ -135,7 +135,7 @@ jQuery(document).ready(function ($) {
   var hideheadergroup;
   var hideperiodheader;
   $.ajax({
-    url: "new-js1/newconfigsection1.json",
+    url: "js5/configsection5.json",
     dataType: "json",
     success: function (data) {
       // To hide & show
