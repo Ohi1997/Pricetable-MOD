@@ -1,5 +1,5 @@
 .bg-pink,
-.bg-purple{
+.bg-purple {
   right: 0;
   bottom: 0;
   width: 100%;
@@ -20,7 +20,7 @@ section {
   position: relative;
   left: 10%;
 }
-.anchor-slick-header:hover{
+.anchor-slick-header:hover {
   color: #000000b7;
 }
 .stockOut {
@@ -105,7 +105,6 @@ a.plans.badge.feat:hover {
   font-size: 25px;
   font-weight: 800;
   text-align: center;
-
 }
 .c-pink-top {
   text-align: center;
@@ -113,7 +112,7 @@ a.plans.badge.feat:hover {
   font-weight: bold;
   color: #ffff !important;
 }
-.c-pink-mid{
+.c-pink-mid {
   font-weight: 600;
 }
 .c-pink-italic {
@@ -128,12 +127,12 @@ a.plans.badge.feat:hover {
   font-size: 16px;
   font-weight: 500;
 }
-.c-pink-btn{
+.c-pink-btn {
   text-align: center;
   position: relative;
 }
 .pricing,
-.tabs-item{
+.tabs-item {
   display: none;
 }
 .btn {
@@ -182,15 +181,14 @@ a.plans.badge.feat:hover {
   color: #fff !important;
   border: none;
 }
-.btn-default-yellow-fill{
+.btn-default-yellow-fill {
   background-color: #fdd700 !important;
   border-color: #fdd700 !important;
 }
 .btn-default-fill,
 .btn-default-pink-fill:hover,
 .btn-default-purple-fill:hover,
-.btn-default-gray-fill:hover
-.btn-default-yellow-fill:hover {
+.btn-default-gray-fill:hover .btn-default-yellow-fill:hover {
   background-color: #4c4a4a !important;
   color: #fff !important;
   border: none;
@@ -293,14 +291,17 @@ a.plans.badge.feat:hover {
 .tabs.offers-tabs .tabs-header div {
   margin-top: 15px;
 }
-#top-content1, #list-info1{
-    background-color: #0583F2 !important;
+#top-content1,
+#list-info1 {
+  background-color: #0583f2 !important;
 }
-#top-content2, #list-info2{
-  background-color: #BC04BF !important;
+#top-content2,
+#list-info2 {
+  background-color: #bc04bf !important;
 }
-#top-content3, #list-info3{
-  background-color: #D92938 !important;
+#top-content3,
+#list-info3 {
+  background-color: #d92938 !important;
 }
 .pricing .wrapper {
   position: relative;
@@ -374,13 +375,13 @@ a.plans.badge.feat:hover {
   float: left;
   padding: 5px 0;
 }
-.upper-top-content{
+.upper-top-content {
   padding: 15px 10px 0px;
 }
-.mid-content{
+.mid-content {
   text-align: center;
 }
-.title{
+.title {
   color: white !important;
   margin-top: 10px;
 }
@@ -398,7 +399,7 @@ a.plans.badge.feat:hover {
 }
 .slick #slider .plan-container .wrapper {
   display: inline-block;
-  text-align: center; 
+  text-align: center;
   position: relative;
   box-shadow: 0 5px 15px 0 rgba(110, 110, 110, 0.1);
   border-radius: 12px;
@@ -510,13 +511,13 @@ svg {
 
 /* @@ Style for themecolor : green */
 
-[data-color="green"] .c-rdb{
+[data-color="green"] .c-rdb {
   color: #008000 !important;
 }
 
 /* @@ Style for themecolor : red */
 
-[data-color="red"] .c-rdb{
+[data-color="red"] .c-rdb {
   color: #d3443a !important;
 }
 
@@ -528,40 +529,64 @@ svg {
 
 /* @@ Style for themecolor : purple */
 
-[data-color="purple"] .c-rdb{
+[data-color="purple"] .c-rdb {
   color: #9b1aac !important;
+}
+
+/* @@ Style for themecolor : teal */
+
+[data-color="teal"] .c-rdb {
+  color: #008080 !important;
+}
+
+/* @@ Style for themecolor : cyan */
+
+[data-color="cyan"] .c-rdb {
+  color: #4dc9c9 !important;
+}
+
+/* @@ Style for themecolor : brown */
+
+[data-color="brown"] .c-rdb {
+  color: #8b3f08 !important;
+}
+
+/* @@ Style for themecolor : pink */
+
+[data-color="pink"] .c-rdb {
+  color: #ee5586 !important;
 }
 
 /* @@ Style for All backgroundcolor */
 
-#radioplans[data-backgroundcolor="green-bg"]{
+#radioplans[data-backgroundcolor="green-bg"] {
   background-color: #f1fae3 !important;
 }
-#radioplans[data-backgroundcolor="black-bg"]{
+#radioplans[data-backgroundcolor="black-bg"] {
   background-color: #fff7f2f6 !important;
 }
-#radioplans[data-backgroundcolor="pink-bg"]{
+#radioplans[data-backgroundcolor="pink-bg"] {
   background-color: #f3d4e3 !important;
 }
-#radioplans[data-backgroundcolor="blue-bg"]{
+#radioplans[data-backgroundcolor="blue-bg"] {
   background-color: #f3f4fa !important;
 }
-#radioplans[data-backgroundcolor="red-bg"]{
+#radioplans[data-backgroundcolor="red-bg"] {
   background-color: #ffeeed !important;
 }
-#radioplans[data-backgroundcolor="purple-bg"]{
+#radioplans[data-backgroundcolor="purple-bg"] {
   background-color: #e6dcd5 !important;
 }
-#radioplans[data-backgroundcolor="orange-bg"]{
+#radioplans[data-backgroundcolor="orange-bg"] {
   background-color: #fceee4 !important;
 }
-#radioplans[data-backgroundcolor="teal-bg"]{
+#radioplans[data-backgroundcolor="teal-bg"] {
   background-color: #c1e4e4 !important;
 }
-#radioplans[data-backgroundcolor="cyan-bg"]{
+#radioplans[data-backgroundcolor="cyan-bg"] {
   background-color: #ebebeb !important;
 }
-#radioplans[data-backgroundcolor="brown-bg"]{
+#radioplans[data-backgroundcolor="brown-bg"] {
   background-color: #fcf4ed !important;
 }
 
@@ -710,26 +735,25 @@ section[data-font="raleway"] textarea {
   .pricing.slider .plan-container {
     margin: 0;
   }
-  #radioplans{
+  #radioplans {
     margin-top: 0;
   }
   .col-md-12 {
     margin-bottom: 0;
   }
-  .slick #slider .plan-container{
+  .slick #slider .plan-container {
     margin: 5px auto;
     max-width: 450px;
   }
-
 }
 @media screen and (max-width: 1440px) {
-  #radioplans{
+  #radioplans {
     margin-top: 0;
   }
   .col-md-12 {
     margin-bottom: 0;
   }
-  .slick #slider .plan-container{
+  .slick #slider .plan-container {
     margin: 5px auto;
     max-width: 450px;
   }
@@ -738,31 +762,32 @@ section[data-font="raleway"] textarea {
   .col-md-12 {
     margin-bottom: 0px;
   }
-  .c-pink-mid{
+  .c-pink-mid {
     font-weight: 500;
   }
-  .tab-content > .active, .tabs-item.active{
+  .tab-content > .active,
+  .tabs-item.active {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 15px;
   }
-  .slick #slider .plan-container{
+  .slick #slider .plan-container {
     width: 300px;
     display: block;
     margin: 10px;
   }
-  .slick #slider .plan-container .svg{
+  .slick #slider .plan-container .svg {
     width: 150px;
     height: 150px;
     position: relative;
     top: 0;
   }
-  .slick #slider .plan-container .wrapper{
+  .slick #slider .plan-container .wrapper {
     width: 300px;
     height: min-content;
   }
-  .tabs-content{
+  .tabs-content {
     margin-top: 170px;
   }
   .btn-group {
@@ -803,7 +828,8 @@ section[data-font="raleway"] textarea {
   .tabs-item .active .show {
     margin-top: 10px;
   }
-  .tab-content > .active, .tabs-item.active{
+  .tab-content > .active,
+  .tabs-item.active {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -812,12 +838,12 @@ section[data-font="raleway"] textarea {
     flex-direction: column;
     flex-wrap: nowrap;
   }
-  .slick #slider .plan-container{
+  .slick #slider .plan-container {
     width: 250px;
     display: block;
     margin: 10px;
   }
-  .slick #slider .plan-container .svg{
+  .slick #slider .plan-container .svg {
     width: 100%;
     height: 100%;
     position: relative;
@@ -826,7 +852,7 @@ section[data-font="raleway"] textarea {
   .slick #slider .plan-container .wrapper {
     width: fit-content;
     height: auto;
-    }
+  }
   .tabs-header {
     overflow-x: visible;
     margin-left: 15px;
