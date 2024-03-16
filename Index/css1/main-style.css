@@ -1049,7 +1049,6 @@ svg {
 [data-backgroundcolor="green-bg"] .slick-list .slick-track {
   background-color: #f1fae3 !important;
 }
-
 #radioplans[data-backgroundcolor="black-bg"],
 [data-backgroundcolor="black-bg"] .slick-list .draggable,
 [data-backgroundcolor="black-bg"] .slick-list .slick-track {
