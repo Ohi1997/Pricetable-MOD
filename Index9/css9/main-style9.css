@@ -915,20 +915,15 @@ section[data-font="raleway"] textarea {
   section#radioplans {
     display: list-item;
   }
-  .slick #slider .plan-container {
-    width: 300px;
-    display: flex;
-    margin-bottom: 20px;
+  .row {
+    flex-direction: column;
   }
-  .tabs-header {
-    overflow-x: visible;
-    margin-left: 20px;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  .slick #slider .plan-container {
+    width: 400px;
+    margin-top: 5px;
+  }
+  .slick #slider .plan-container .wrapper {
+    margin: 0px;
   }
   .row .tabs-content {
     position: relative;
@@ -939,9 +934,10 @@ section[data-font="raleway"] textarea {
     justify-content: center;
   }
   .slick #slider .plan-container .wrapper .list-info {
-    margin: 0.5px;
-    padding: 0px;
+    margin: 0px;
+    padding: 10px;
   }
+
 }
 @media screen and (max-width: 425px) {
   section#radioplans {
@@ -982,6 +978,7 @@ section[data-font="raleway"] textarea {
   }
   .slick #slider .plan-container {
     width: 350px;
+    margin-top: 0;
   }
   .slick #slider .plan-container .wrapper {
     margin-bottom: 20px;
