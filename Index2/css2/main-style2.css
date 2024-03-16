@@ -108,7 +108,7 @@ a.plans.badge.feat {
   border: 1px solid #4c4a4a;
   border-radius: 50px;
   color: #4c4a4a;
-  font-size: 14px;
+  font-size: 15px;
   margin: 0;
   padding: 12px 25px;
   position: relative;
@@ -153,6 +153,12 @@ a.plans.badge.feat {
   color: #000 !important;
   background-color: #fdd700 !important;
   border-color: #fdd700 !important;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 .btn-secondary:not(:disabled):not(.disabled) {
   color: #4c4a4a;
@@ -1302,7 +1308,6 @@ section[data-font="raleway"] textarea {
 @media screen and (max-width: 1024px) {
   .tabs-header {
     overflow-x: visible;
-    margin-left: 20px;
     position: relative;
     display: flex;
     vertical-align: middle;
@@ -1427,7 +1432,6 @@ section[data-font="raleway"] textarea {
 @media screen and (max-width: 768px) {
   .tabs-header {
     overflow-x: visible;
-    margin-left: 20px;
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -1497,7 +1501,6 @@ section[data-font="raleway"] textarea {
   }
   .tabs-header {
     overflow-x: visible;
-    margin-left: 20px;
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -1550,7 +1553,6 @@ section[data-font="raleway"] textarea {
   }
   .tabs-header {
     overflow-x: visible;
-    margin-left: 20px;
     position: relative;
     display: inline-block;
     vertical-align: middle;

@@ -87,7 +87,7 @@ a.plans.badge.feat {
   border: 1px solid #4c4a4a;
   border-radius: 50px;
   color: #4c4a4a;
-  font-size: 17px;
+  font-size: 15px;
   margin: 0;
   padding: 12px 25px;
   position: relative;
@@ -132,6 +132,12 @@ a.plans.badge.feat {
   color: #000 !important;
   background-color: #fdd700 !important;
   border-color: #fdd700 !important;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 .btn-secondary:not(:disabled):not(.disabled) {
   color: #4c4a4a;
@@ -514,33 +520,33 @@ svg {
 [data-color="blue"] .btn-default-grad-purple-fill:hover {
   background-image: linear-gradient(
     to right,
-    #1C25AB,
+    #1c25ab,
     #1f2ac2 40%,
     #1f2ac2 40%,
-    #1C25AB
+    #1c25ab
   );
 }
 [data-color="blue"] .bg-purple,
 [data-color="blue"] .btn-default-purple-fill {
-  background-color: #1C25AB !important;
+  background-color: #1c25ab !important;
 }
 [data-color="blue"] .c-pink,
 [data-color="blue"] .c-purple {
   color: #fff !important;
 }
 [data-color="blue"] .sec-grad-white-to-purple {
-  background: linear-gradient(90deg, #fff 70%, #1C25AB 0) !important;
+  background: linear-gradient(90deg, #fff 70%, #1c25ab 0) !important;
 }
 [data-color="blue"] .btn-default-purple {
-  color: #1C25AB;
-  border: 1px solid #1C25AB;
+  color: #1c25ab;
+  border: 1px solid #1c25ab;
 }
 [data-color="blue"] .btn-default-purple:hover,
 [data-color="blue"] .wpc-vps-info .price-wrap .title {
-  background-color: #1C25AB;
+  background-color: #1c25ab;
 }
 [data-color="blue"] .pricing .table .title {
-  color: #1C25AB;
+  color: #1c25ab;
 }
 
 /* @@ Style for themecolor : green */
@@ -634,10 +640,10 @@ svg {
 [data-color="pink"] .btn-default-grad-purple-fill:hover {
   background-image: linear-gradient(
     to right,
-    #EB5E7D,
+    #eb5e7d,
     #ee5586 40%,
     #ee5586 40%,
-    #EB5E7D
+    #eb5e7d
   );
 }
 [data-color="pink"] .tabs.offers-tabs .tabs-header .active {
@@ -646,25 +652,25 @@ svg {
 }
 [data-color="pink"] .bg-purple,
 [data-color="pink"] .btn-default-purple-fill {
-  background-color: #EB5E7D !important;
+  background-color: #eb5e7d !important;
 }
 [data-color="pink"] .c-pink,
 [data-color="pink"] .c-purple {
   color: #fff !important;
 }
 [data-color="pink"] .btn-default-purple {
-  color: #EB5E7D;
-  border: 1px solid #EB5E7D;
+  color: #eb5e7d;
+  border: 1px solid #eb5e7d;
 }
 [data-color="pink"] .btn-default-purple:hover {
-  background-color: #EB5E7D;
+  background-color: #eb5e7d;
 }
 [data-color="pink"] .pricing .wrapper .title,
 [data-color="pink"] .slick #slider .plan-container .title {
   color: #ee5586;
 }
 [data-color="pink"] .pricing .table .title {
-  color: #EB5E7D;
+  color: #eb5e7d;
 }
 
 /* @@ Style for themecolor : red */
@@ -1247,7 +1253,6 @@ section[data-font="raleway"] textarea {
 @media screen and (max-width: 1024px) {
   .tabs-header {
     overflow-x: visible;
-    margin-left: 20px;
     position: relative;
     display: flex;
     vertical-align: middle;
@@ -1365,7 +1370,6 @@ section[data-font="raleway"] textarea {
 @media screen and (max-width: 768px) {
   .tabs-header {
     overflow-x: visible;
-    margin-left: 20px;
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -1432,7 +1436,6 @@ section[data-font="raleway"] textarea {
   }
   .tabs-header {
     overflow-x: visible;
-    margin-left: 20px;
     position: relative;
     display: inline-block;
     vertical-align: middle;

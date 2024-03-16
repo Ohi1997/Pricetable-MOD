@@ -192,8 +192,12 @@ a.plans.badge.feat:hover {
   color: #000 !important;
   background-color: #fdd700 !important;
   border-color: #fdd700 !important;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
   font-size: 15px;
   color: #4c4a4a;
 }
