@@ -1,259 +1,221 @@
 jQuery(document).ready(function ($) {
-  //declaring global variables
-  var data;
-  var currentPeriodHeader;
+// Removing "active" class with timeout
+setTimeout(function () {
+  $(".redb").removeClass("active");
+}, 1000);
 
-  setTimeout(function () {
-    $(".redb").removeClass("active");
-  }, 1000);
+//declaring global variables
+var data;
+var currentPeriodHeader;
+var hideheadergroup;
+var hideperiodheader;
 
-  // Update pricing for periods
-  function updatePricing(selectedheader, period) {
-    var price = period + "price";
-    var link = period + "link";
-
-    $.ajax({
-      url: "js4/configsection4.json",
-      dataType: "json",
-      success: function (jsonData) {
-        data = jsonData;
-        var headerMatched = false;
-
-        if (data && data.headers) {
-          data.headers.forEach(function (section) {
-            if (section.name === selectedheader) {
-              for (var i = 0; i < 5; i++) {
-                $("#" + selectedheader + "-price" + (i + 1)).html(
-                  "<sup>$</sup>" +
-                    section.plans[i][price] +
-                    '<span class="period">/mo</span>'
-                );
-                $("#" + selectedheader + "-link" + (i + 1)).attr(
-                  "href",
-                  section.plans[i][link]
-                );
-              }
-              headerMatched = true;
-            }
-          });
-        }
-
-        if (headerMatched) {
-          $("#" + period)
-            .addClass("active")
-            .siblings()
-            .removeClass("active");
-        }
-      },
-    });
-  }
-
-  // Trigger updatePricing with default values when the DOM is ready
+// Function to update pricing and handle visibility settings
+function updatePricingAndSettings() {
   $.ajax({
     url: "js4/configsection4.json",
     dataType: "json",
     success: function (jsonData) {
       data = jsonData;
+
+      // Update pricing
       var selectedheader = $("#headergroup li.active")[0].id;
       var defaultPeriod = getDefaultPeriodVisibility(data);
       updatePricing(selectedheader, defaultPeriod);
-      currentPeriodHeader = defaultPeriod; //  Setting the current period header to default
+      currentPeriodHeader = defaultPeriod; // Setting the current period header to default
       resetPeriodHeader(defaultPeriod);
+
+      // Handle visibility settings
+      handleVisibilitySettings(data);
+
+      // Update period headers
+      updatePeriodHeaders(data);
     },
   });
+}
 
-  // Handle click events on header buttons
-  $("#headergroup li").click(function () {
-    var selectedheader = this.id;
+// Function to update pricing for periods
+function updatePricing(selectedheader, period) {
+  var price = period + "price";
+  var link = period + "link";
 
-    // Get the default period
-    var defaultPeriod = getDefaultPeriodVisibility(data);
-    updatePricing(selectedheader, defaultPeriod);
+  if (data && data.headers) {
+    data.headers.forEach(function (section) {
+      if (section.name === selectedheader) {
+        for (var i = 0; i < 5; i++) {
+          $("#" + selectedheader + "-price" + (i + 1)).html(
+            "<sup>$</sup>" +
+              section.plans[i][price] +
+              '<span class="period">/mo</span>'
+          );
+          $("#" + selectedheader + "-link" + (i + 1)).attr(
+            "href",
+            section.plans[i][link]
+          );
+        }
+        $("#" + period)
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
+      }
 
-    // Set the current period header to the default
-    currentPeriodHeader = defaultPeriod;
-    // Set the periodheader button to the default state
-    resetPeriodHeader(defaultPeriod);
-  });
+      //variables declared to update the dom from json
+      var headerSelector = "#" + section.name;
+      var headerlabeltab = "." + section.name;
+      var headerlabel = headerSelector.replace("header", "headerlabel");
+      var headerlabeltabSelector = headerlabeltab.replace(
+        "header",
+        "headerlabeltab"
+      );
+      if (section.visible == false) {
+        $(headerSelector).hide();
+        $(headerlabel).hide();
+        $(headerlabeltabSelector).hide();
+        return;
+      }
+      //takes value from json and updates headers at the DOM
+      $(headerSelector).text(section.value);
+      $(headerlabel).text(section.value);
+      $(headerlabeltabSelector).text(section.value);
 
-  // Handle click events on period buttons
-  $("#monthly, #quarterly, #halfyearly, #yearly").click(function () {
-    var selectedheader = $("#headergroup li.active")[0].id;
-    var period = this.id;
+      // Checks individual pricing plans to trigger stockout plans from json
+      var plannum = 1;
+      section.plans.forEach(function (pricingplan) {
+        if (pricingplan.stockout) {
+          var stockoutplan = $(headerSelector + "plan" + plannum);
 
-    // Remove the 'active' class from all period buttons
-    $("#monthly, #quarterly, #halfyearly, #yearly").removeClass("active");
-    $(this).addClass("active");
-    updatePricing(selectedheader, period);
-
-    // Set the current period header to the clicked period
-    currentPeriodHeader = period;
-    resetPeriodHeader(currentPeriodHeader);
-  });
-
-  // Function to reset periodheader to default state
-  function resetPeriodHeader(defaultPeriod) {
-    // Remove the 'active' class from all period buttons
-    $("#monthly, #quarterly, #halfyearly, #yearly").removeClass("active");
-
-    // Add the 'active' class to the current period header button
-    $("#" + defaultPeriod)
-      .addClass("active")
-      .siblings()
-      .removeClass("active");
+          if (stockoutplan.length) {
+            stockoutplan.find(".top-content").addClass("stockOut");
+            $(headerSelector + "-link" + plannum).text("Out of Stock");
+          }
+        }
+        plannum += 1;
+        return false;
+      });
+    });
   }
+}
 
-  // Handle click events on button click
-  $("#monthly, #quarterly, #halfyearly, #yearly").click(function () {
-    var selectedheader = $("#headergroup li.active")[0].id;
-    var period = this.id;
-    updatePricing(selectedheader, period);
-    // Check window width before executing slickGoTo
-    if (
-      $(window).width() >= 590 && $(".my-slider").hasClass("slick-initialized")
-    ) {
-      $(".my-slider").slick("slickGoTo", 0, true);
-    }
-  });
+// Function to reset period header to default state
+function resetPeriodHeader(defaultPeriod) {
+  $("#monthly, #quarterly, #halfyearly, #yearly").removeClass("active");
+  $("#" + defaultPeriod)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
+}
 
-  // Function to get the default period based on visibility status from json
-  function getDefaultPeriodVisibility(data) {
-    var defaultPeriods = ["monthly", "quarterly", "halfyearly", "yearly"];
-
+// Function to get the default period based on visibility status from json
+function getDefaultPeriodVisibility(data) {
+  var defaultPeriods = ["monthly", "quarterly", "halfyearly", "yearly"];
+  if (data && data.periodheaders) {
     for (var i = 0; i < defaultPeriods.length; i++) {
       var period = defaultPeriods[i];
       if (data.periodheaders[i].visible) {
         return period;
       }
     }
-
-    return "monthly";
   }
+  return "monthly";
+}
 
-  var hideheadergroup;
-  var hideperiodheader;
-  $.ajax({
-    url: "js4/configsection4.json",
-    dataType: "json",
-    success: function (data) {
-      // To hide & show
-      data.settings.forEach(function (settingselement) {
-        hideheadergroup = settingselement.hideheadergroup;
-        hideperiodheader = settingselement.hideperiodheader;
+// Function to handle visibility settings
+function handleVisibilitySettings(data) {
+  if (data && data.settings) {
+    data.settings.forEach(function (settingselement) {
+      hideheadergroup = settingselement.hideheadergroup;
+      hideperiodheader = settingselement.hideperiodheader;
 
-        var themecolor = settingselement.themecolor;
-        var themefont = settingselement.themefont;
+      var themecolor = settingselement.themecolor;
+      var themefont = settingselement.themefont;
 
-        var optionSettings = {
-          backgroundcolor: themecolor + "-bg",
-          color: themecolor,
-          font: themefont,
-          textDirection: "ltr",
-        };
+      var optionSettings = {
+        backgroundcolor: themecolor + "-bg",
+        color: themecolor,
+        font: themefont,
+        textDirection: "ltr",
+      };
 
-        new pricetableSettings(optionSettings);
+      new pricetableSettings(optionSettings);
 
-        if (hideheadergroup == false) {
-          $("#headergroup").show();
-          $(".anchor-slick-header").show();
-          $(".list-location").show();
-        } else {
-          $("#headergroup").hide();
-          $(".anchor-slick-header").hide();
-          $(".list-location").hide();
-        }
-        // To hide & show periodheaders
-        if (hideperiodheader == false) {
-          $("#periodheader").show();
-        } else {
-          $("#periodheader").hide();
-        }
-      });
+      // Handle header group visibility
+      if (hideheadergroup == false) {
+        $("#headergroup").show();
+        $(".anchor-slick-header").show();
+        $(".list-location").show();
+      } else {
+        $("#headergroup").hide();
+        $(".anchor-slick-header").hide();
+        $(".list-location").hide();
+      }
 
-      // To hide/show individual periodheader, change the element "visible" to 'false/true' at json file
-      data.periodheaders.forEach(function (periodheader) {
-        var periodheaderselector = "." + periodheader.name;
-        if (periodheader.visible == false) {
-          $(periodheaderselector).hide();
-          return;
-        }
+      // Handle period header visibility
+      if (hideperiodheader == false) {
+        $("#periodheader").show();
+      } else {
+        $("#periodheader").hide();
+      }
+    });
+  }
+}
 
-        // Using a regular expression to match any numeric percentage in the format (X% Off)
-        var match = periodheader.value.match(/\((\d+% Off)\)/);
+// Function to update period headers
+function updatePeriodHeaders(data) {
+  // To hide/show individual periodheader, change the element "visible" to 'false/true' at json file
+  if (data && data.periodheaders) {
+    data.periodheaders.forEach(function (periodheader) {
+      var periodheaderselector = "." + periodheader.name;
+      if (periodheader.visible == false) {
+        $(periodheaderselector).hide();
+        return;
+      }
 
-        if (match) {
-          // Extract the matched percentage and apply formatting
-          var percentage = match[1];
-          periodheader.value = periodheader.value.replace(
-            /\((\d+% Off)\)/,
-            '<span class="text-danger">(' + percentage + ")</span>"
-          );
-        }
+      // Using a regular expression to match any numeric percentage in the format (X% Off)
+      var match = periodheader.value.match(/\((\d+% (?:\w+)?(?: Off)?)\)/);
 
-        // Update periodheaders in the DOM using jQuery methods
-        $(periodheaderselector).html(periodheader.value);
-      });
-
-      data.periodheaders.forEach(function (periodheader) {
-        var periodheaderselector = "." + periodheader.name;
-        if (periodheader.visible == false) {
-          $(periodheaderselector).hide();
-          return;
-        }
-
-        // Use a regular expression to match any numeric percentage and the following word in the format (X% [any word])
-        var match = periodheader.value.match(/\((\d+% \w+)\)/);
-
-        if (match) {
-          // Extract the matched percentage and word, and apply formatting
-          var percentageAndWord = match[1];
-          periodheader.value = periodheader.value.replace(
-            /\((\d+% \w+)\)/,
-            '<span class="text-danger">(' + percentageAndWord + ")</span>"
-          );
-        }
-
-        // Update period headers in the DOM
-        $(periodheaderselector).html(periodheader.value);
-      });
-
-      // To hide/show individual header, change the element "visible" to 'false/true' at json file
-      data.headers.forEach(function (section) {
-        var headerSelector = "#" + section.name;
-        var headerlabeltab = "." + section.name;
-        var headerlabel = headerSelector.replace("header", "headerlabel");
-        var headerlabeltabSelector = headerlabeltab.replace(
-          "header",
-          "headerlabeltab"
+      if (match) {
+        // Extract the matched percentage and apply formatting
+        var percentageAndWord = match[1];
+        periodheader.value = periodheader.value.replace(
+          /\((\d+% (?:\w+)?(?: Off)?)\)/,
+          '<span class="text-danger">(' + percentageAndWord + ")</span>"
         );
-        if (section.visible == false) {
-          $(headerSelector).hide();
-          $(headerlabel).hide();
-          $(headerlabeltabSelector).hide();
-          return;
-        }
-        //takes value from json and updates headers at the DOM
-        $(headerSelector).text(section.value);
-        $(headerlabel).text(section.value);
-        $(headerlabeltabSelector).text(section.value);
+      }
 
-        // Checks individual pricing plans to trigger stockout plans from json
-        var plannum = 1;
-        section.plans.forEach(function (pricingplan) {
-          if (pricingplan.stockout) {
-            var stockoutplan = $(headerSelector + "plan" + plannum);
+      // Update period headers in the DOM using jQuery methods
+      $(periodheaderselector).html(periodheader.value);
+    });
+  }
+}
 
-            if (stockoutplan.length) {
-              stockoutplan.find(".top-content").addClass("stockOut");
-              $(headerSelector + "-link" + plannum).text("Out of Stock");
-            }
-          }
-          plannum += 1;
-          return false;
-        });
-      });
-    },
-  });
+// Call the function to update pricing and handle visibility settings
+updatePricingAndSettings();
+
+// Handle click events on header buttons
+$("#headergroup li").click(function () {
+  var selectedheader = this.id;
+  var defaultPeriod = getDefaultPeriodVisibility(data);
+  updatePricing(selectedheader, defaultPeriod);
+  currentPeriodHeader = defaultPeriod;
+  resetPeriodHeader(defaultPeriod);
+});
+
+// Handle click events on period buttons
+$("#monthly, #quarterly, #halfyearly, #yearly").click(function () {
+  var selectedheader = $("#headergroup li.active")[0].id;
+  var period = this.id;
+  $("#monthly, #quarterly, #halfyearly, #yearly").removeClass("active");
+  $(this).addClass("active");
+  updatePricing(selectedheader, period);
+  currentPeriodHeader = period;
+  resetPeriodHeader(currentPeriodHeader);
+  if (
+    $(window).width() >= 590 &&
+    $(".my-slider").hasClass("slick-initialized")
+  ) {
+    $(".my-slider").slick("slickGoTo", 0, true);
+  }
+});
 
   //Function to load header-tabs
   function loadTabs() {
@@ -323,13 +285,14 @@ jQuery(document).ready(function ($) {
       infinite: true,
       centerPadding: "200px",
       slidesToShow: 4,
-      slidesToScroll: 1,
+      slidesToScroll: 3,
       responsive: [
         {
           breakpoint: 1200,
           settings: {
             centerPadding: "100px",
             slidesToShow: 3,
+            slidesToScroll: 2
           },
         },
         {
@@ -341,11 +304,12 @@ jQuery(document).ready(function ($) {
           },
         },
         {
-          breakpoint: 768,
+          breakpoint: 780,
           settings: {
-            centerMode: true,
+            centerMode: false,
             centerPadding: "50px",
             slidesToShow: 2,
+            slidesToScroll: 1
           },
         },
         {
