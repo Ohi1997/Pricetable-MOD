@@ -30,7 +30,7 @@ function updatePricingAndSettings() {
 
       // Update period headers
       updatePeriodHeaders(data);
-    },
+    }
   });
 }
 
@@ -99,10 +99,7 @@ function updatePricing(selectedheader, period) {
 // Function to reset period header to default state
 function resetPeriodHeader(defaultPeriod) {
   $("#monthly, #quarterly, #halfyearly, #yearly").removeClass("active");
-  $("#" + defaultPeriod)
-    .addClass("active")
-    .siblings()
-    .removeClass("active");
+  $("#" + defaultPeriod).addClass("active").siblings().removeClass("active");
 }
 
 // Function to get the default period based on visibility status from json
