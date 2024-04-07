@@ -1,6 +1,8 @@
 $(document).ready(function ($) {
+  // Declaring global variables
   var showperiodheader;
   var selectedHeader;
+  var jsonUrl = "js10/configsection10.json"; // Store configuration file path
 
   // Function to get the default period based on visibility status from json
   function getDefaultPeriodVisibility(data) {
@@ -22,7 +24,7 @@ $(document).ready(function ($) {
     var link = period + "link";
 
     $.ajax({
-      url: "js10/configsection10.json",
+      url: jsonUrl,
       dataType: "json",
       success: function (data) {
         var headerMatched = false;
@@ -59,7 +61,7 @@ $(document).ready(function ($) {
 
   // Initial setup
   $.ajax({
-    url: "js10/configsection10.json",
+    url: jsonUrl,
     dataType: "json",
     success: function (data) {
       showperiodheader = data.settings[0].showperiodheader;

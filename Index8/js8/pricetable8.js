@@ -1,4 +1,5 @@
 $(document).ready(function ($) {
+  var jsonUrl = "js8/configsection8.json"; // Store configuration file path
 
   // Function to update pricing based on selected period
   function updatePricing(period) {
@@ -6,7 +7,7 @@ $(document).ready(function ($) {
     var link = period + "link";
 
     $.ajax({
-      url: "js8/configsection8.json",
+      url: jsonUrl,
       dataType: "json",
       success: function (data) {
         var headerMatched = false;
@@ -58,7 +59,7 @@ $(document).ready(function ($) {
   // Initial setup
 
   $.ajax({
-    url: "js8/configsection8.json",
+    url: jsonUrl,
     dataType: "json",
     success: function (data) {
       // To hide & show
@@ -133,7 +134,7 @@ $(document).ready(function ($) {
     }
     return null;
   }
-  
+
   //addCss
   function addCss(fileName) {
     var head = document.head,
@@ -279,7 +280,7 @@ $(document).ready(function ($) {
           );
         setCookie("font", "poppins", 365);
         break;
-      
+
       case "nunito":
         section.attr("data-font", "nunito"),
           addCss(
@@ -287,7 +288,7 @@ $(document).ready(function ($) {
           );
         setCookie("font", "nunito", 365);
         break;
-      
+
       case "alexandria":
         section.attr("data-font", "alexandria"),
           addCss(

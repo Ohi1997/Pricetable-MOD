@@ -1,122 +1,124 @@
 $(document).ready(function ($) {
-  // Declaring global variables
-  var showperiodheader;
-  var selectedHeader;
+// Declaring global variables
+var showperiodheader;
+var selectedHeader;
+var jsonUrl = "js9/configsection9.json"; // Store configuration file path
 
-  // Function to get the default period based on visibility status from json
-  function getDefaultPeriodVisibility(data) {
-    var defaultPeriods = ["monthly", "quarterly", "halfyearly", "yearly"];
+// Function to get the default period based on visibility status from json
+function getDefaultPeriodVisibility(data) {
+  var defaultPeriods = ["monthly", "quarterly", "halfyearly", "yearly"];
 
-    for (var i = 0; i < defaultPeriods.length; i++) {
-      var period = defaultPeriods[i];
-      if (data.periodheaders[i].visible) {
-        return period;
-      }
+  for (var i = 0; i < defaultPeriods.length; i++) {
+    var period = defaultPeriods[i];
+    if (data.periodheaders[i].visible) {
+      return period;
     }
-
-    return "monthly";
   }
 
-  // Function to update pricing based on selected period
-  function updatePricing(period) {
-    var price = period + "price";
-    var link = period + "link";
+  return "monthly";
+}
 
-    $.ajax({
-      url: "js9/configsection9.json",
-      dataType: "json",
-      success: function (data) {
-        var headerMatched = false;
+// Function to update pricing based on selected period
+function updatePricing(period) {
+  var price = period + "price";
+  var link = period + "link";
 
-        data.headers.forEach(function (section) {
-          if (section.name === period) {
-            for (var i = 0; i < section.plans.length; i++) {
-              $(".plan-container")
-                .eq(i)
-                .find(".price")
-                .html(
-                  "<sup>$</sup>" +
-                    section.plans[i][price] +
-                    '<span class="period">/mo</span>'
-                );
-              $(".plan-container")
-                .eq(i)
-                .find(".btn-buynow")
-                .attr("href", section.plans[i][link]);
-            }
-            headerMatched = true;
-          }
-        });
-
-        if (headerMatched) {
-          $("#" + period)
-            .addClass("active")
-            .siblings()
-            .removeClass("active");
-        }
-      },
-    });
-  }
-
-  // Initial setup
   $.ajax({
-    url: "js9/configsection9.json",
+    url: jsonUrl,
     dataType: "json",
     success: function (data) {
-      showperiodheader = data.settings[0].showperiodheader;
+      var headerMatched = false;
 
-      var themecolor = data.settings[0].themecolor;
-      var themefont = data.settings[0].themefont;
+      data.headers.forEach(function (section) {
+        if (section.name === period) {
+          for (var i = 0; i < section.plans.length; i++) {
+            $(".plan-container")
+              .eq(i)
+              .find(".price")
+              .html(
+                "<sup>$</sup>" +
+                  section.plans[i][price] +
+                  '<span class="period">/mo</span>'
+              );
+            $(".plan-container")
+              .eq(i)
+              .find(".btn-buynow")
+              .attr("href", section.plans[i][link]);
+          }
+          headerMatched = true;
+        }
+      });
 
-      var optionSettings = {
-        backgroundcolor: themecolor + "-bg",
-        color: themecolor,
-        font: themefont,
-        textDirection: "ltr",
-      };
-
-      new pricetableSettings(optionSettings);
-
-      if (showperiodheader == true) {
-        $("#periodheader").show();
-      } else {
-        $("#periodheader").hide();
+      if (headerMatched) {
+        $("#" + period)
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
       }
-
-      selectedHeader = getDefaultPeriodVisibility(data);
-
-      updatePricing(selectedHeader);
-
-      $("#monthly, #quarterly, #halfyearly, #yearly").click(function () {
-        selectedHeader = $(this).attr("id");
-        updatePricing(selectedHeader);
-      });
-
-      // To hide/show individual periodheader, change the element "visible" to 'false/true' at json file
-      data.periodheaders.forEach(function (periodheader) {
-        var periodheaderselector = "." + periodheader.name;
-        if (periodheader.visible == false) {
-          $(periodheaderselector).hide();
-          return;
-        }
-
-        // Using a regular expression to match any numeric percentage in the format (X% Off)
-        var match = periodheader.value.match(/\((\d+% (?:\w+)?(?: Off)?)\)/);
-
-        if (match) {
-          // Extract the matched percentage and apply formatting
-          var percentageAndWord = match[1];
-          periodheader.value = periodheader.value.replace(
-            /\((\d+% (?:\w+)?(?: Off)?)\)/,
-            '<span class="text-danger">(' + percentageAndWord + ")</span>"
-          );
-        }
-
-        // Update period headers in the DOM using jQuery methods
-        $(periodheaderselector).html(periodheader.value);
-      });
     },
   });
+}
+
+// Initial setup
+$.ajax({
+  url: jsonUrl,
+  dataType: "json",
+  success: function (data) {
+    showperiodheader = data.settings[0].showperiodheader;
+
+    var themecolor = data.settings[0].themecolor;
+    var themefont = data.settings[0].themefont;
+
+    var optionSettings = {
+      backgroundcolor: themecolor + "-bg",
+      color: themecolor,
+      font: themefont,
+      textDirection: "ltr",
+    };
+
+    new pricetableSettings(optionSettings);
+
+    if (showperiodheader == true) {
+      $("#periodheader").show();
+    } else {
+      $("#periodheader").hide();
+    }
+
+    selectedHeader = getDefaultPeriodVisibility(data);
+
+    updatePricing(selectedHeader);
+
+    $("#monthly, #quarterly, #halfyearly, #yearly").click(function () {
+      selectedHeader = $(this).attr("id");
+      updatePricing(selectedHeader);
+    });
+
+    // To hide/show individual periodheader, change the element "visible" to 'false/true' at json file
+    data.periodheaders.forEach(function (periodheader) {
+      var periodheaderselector = "." + periodheader.name;
+      if (periodheader.visible == false) {
+        $(periodheaderselector).hide();
+        return;
+      }
+
+      // Using a regular expression to match any numeric percentage in the format (X% Off)
+      var match = periodheader.value.match(/\((\d+% (?:\w+)?(?: Off)?)\)/);
+
+      if (match) {
+        // Extract the matched percentage and apply formatting
+        var percentageAndWord = match[1];
+        periodheader.value = periodheader.value.replace(
+          /\((\d+% (?:\w+)?(?: Off)?)\)/,
+          '<span class="text-danger">(' + percentageAndWord + ")</span>"
+        );
+      }
+
+      // Update period headers in the DOM using jQuery methods
+      $(periodheaderselector).html(periodheader.value);
+    });
+  },
+});
+
 
   function setCookie(name, value, days) {
     if (days) {
