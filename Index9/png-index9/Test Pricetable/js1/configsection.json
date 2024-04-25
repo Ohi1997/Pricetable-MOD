@@ -1,0 +1,103 @@
+{
+  "settings": [
+    {
+      "hideheadergroup": false,
+      "hideperiodheader": false,
+      "ColorComment": "Theme color can be: red, green, blue, black, orange, teal, pink, cyan, brown, purple",
+      "themecolor": "brown",
+      "FontComment": "Font name can be: opensans, nunito, poppins, raleway, alexandria, commissioner, farro, geologica, dmsans, quicksand ",
+      "themefont": "opensans"
+    }
+  ],
+  "periodheaders": [
+    {
+      "name": "periodheader1",
+      "value": "Monthly",
+      "visible": true
+    },
+    {
+      "name": "periodheader2",
+      "value": "Quarterly (10% Off)",
+      "visible": true
+    },
+    {
+      "name": "periodheader3",
+      "value": "Halfyearly (15% Off)",
+      "visible": true
+    },
+    {
+      "name": "periodheader4",
+      "value": "Yearly (20% Off)",
+      "visible": true
+    }
+  ],
+  "headers": [
+    {
+      "name": "header1",
+      "value": "NETHERLANDS",
+      "visible": true,
+      "plans": [
+        {
+          "name": "2GB Plan",
+          "stockout": true,
+          "monthlyprice": "14.95",
+          "quarterlyprice": "13.65",
+          "halfyearlyprice": "12.71",
+          "yearlyprice": "11.65",
+          "monthlylink": "#",
+          "quarterlylink": "#",
+          "halfyearlylink": "#",
+          "yearlylink": "#"
+        },
+        {
+          "name": "4GB Plan",
+          "stockout": false,
+          "monthlyprice": "20.99",
+          "quarterlyprice": "18.92",
+          "halfyearlyprice": "17.25",
+          "yearlyprice": "15.92",
+          "monthlylink": "#",
+          "quarterlylink": "#",
+          "halfyearlylink": "#",
+          "yearlylink": "#"
+        },
+        {
+          "name": "6GB Plans",
+          "stockout": false,
+          "monthlyprice": "29.99",
+          "quarterlyprice": "26.99",
+          "halfyearlyprice": "25.5",
+          "yearlyprice": "24.99",
+          "monthlylink": "#",
+          "quarterlylink": "#",
+          "halfyearlylink": "#",
+          "yearlylink": "#"
+        },
+        {
+          "name": "8GB Plan",
+          "stockout": false,
+          "monthlyprice": "39.99",
+          "quarterlyprice": "37.99",
+          "halfyearlyprice": "35.99",
+          "yearlyprice": "33.99",
+          "monthlylink": "#",
+          "quarterlylink": "#",
+          "halfyearlylink": "#",
+          "yearlylink": "#"
+        },
+        {
+          "name": "16GB Plan",
+          "stockout": false,
+          "monthlyprice": "79.99",
+          "quarterlyprice": "75.66",
+          "halfyearlyprice": "72.99",
+          "yearlyprice": "70.66",
+          "monthlylink": "#",
+          "quarterlylink": "#",
+          "halfyearlylink": "#",
+          "yearlylink": "#"
+        }
+      ]
+    }
+  ]
+}
